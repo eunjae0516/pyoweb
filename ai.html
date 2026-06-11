@@ -1,0 +1,207 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AI Recommendation - BIRD GUARD</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+		<div id="wrapper">
+
+			<header id="header">
+				<h1><a href="index.html">BIRD GUARD</a></h1>
+				<nav class="links">
+					<ul>
+						<li><a href="about.html">About</a></li>
+						<li><a href="why.html">Why Crash</a></li>
+						<li class="active"><a href="ai.html">AI Rec</a></li>
+						<li><a href="stickers.html">Stickers</a></li>
+						<li><a href="guide.html">Guide</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="stats.html">Stats</a></li>
+						<li><a href="campaign.html">Campaign</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<nav class="main">
+					<ul>
+						<li class="search">
+							<a class="fa-search" href="#search">Search</a>
+							<form id="search" method="get" action="#"><input type="text" name="query" placeholder="Search" /></form>
+						</li>
+						<li class="menu"><a class="fa-bars" href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<section id="menu">
+				<section>
+					<form class="search" method="get" action="#"><input type="text" name="query" placeholder="Search" /></form>
+				</section>
+				<section>
+					<ul class="links">
+						<li><a href="about.html"><h3>About Bird Collision</h3><p>조류 충돌 문제 소개</p></a></li>
+						<li><a href="why.html"><h3>Why Birds Crash</h3><p>유리 반사 충돌 원인</p></a></li>
+						<li class="active"><a href="ai.html"><h3>AI Recommendation</h3><p>AI 기반 스티커 추천</p></a></li>
+						<li><a href="stickers.html"><h3>Sticker Types</h3><p>스티커 종류 및 선택 가이드</p></a></li>
+						<li><a href="guide.html"><h3>Install Guide</h3><p>스티커 설치 방법</p></a></li>
+						<li><a href="gallery.html"><h3>Gallery</h3><p>실제 적용 사례 갤러리</p></a></li>
+						<li><a href="stats.html"><h3>Statistics</h3><p>충돌 통계 및 방지 효과</p></a></li>
+						<li><a href="campaign.html"><h3>Campaign</h3><p>시민 참여 캠페인</p></a></li>
+						<li><a href="faq.html"><h3>FAQ</h3><p>자주 묻는 질문</p></a></li>
+						<li><a href="contact.html"><h3>Contact</h3><p>문의 및 캠페인 신청</p></a></li>
+					</ul>
+				</section>
+				<section>
+					<ul class="actions stacked">
+						<li><a href="contact.html" class="button large fit">문의하기</a></li>
+					</ul>
+				</section>
+			</section>
+
+			<div id="main">
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2>AI Recommendation</h2>
+							<p>건물 외관과 주변 환경을 분석해서 최적 스티커를 추천합니다</p>
+						</div>
+					</header>
+
+					<!-- 4단계 프로세스 박스 2×2 그리드 -->
+					<h3>추천 프로세스 4단계</h3>
+					<div class="row gtr-uniform" style="margin-bottom: 2em;">
+						<div class="col-6 col-12-small">
+							<div class="bg-step-box">
+								<span class="bg-step-number">1</span>
+								<h4>환경 진단 (Input)</h4>
+								<p>건물 방위, 유리 면적, 주변 녹지·수면 여부, 층수, 인근 충돌 이력을 입력합니다. 값이 정확할수록 추천 정밀도가 높아집니다.</p>
+							</div>
+						</div>
+						<div class="col-6 col-12-small">
+							<div class="bg-step-box">
+								<span class="bg-step-number">2</span>
+								<h4>위험도 분석 (Scoring)</h4>
+								<p>입력 변수를 조합해 0~100점 충돌 위험 지수(BCI, Bird Collision Index)를 산출합니다. 방위·녹지 인접·층수가 주요 변수입니다.</p>
+							</div>
+						</div>
+						<div class="col-6 col-12-small">
+							<div class="bg-step-box">
+								<span class="bg-step-number">3</span>
+								<h4>패턴 매칭 (Matching)</h4>
+								<p>BCI 점수와 건물 유형에 따라 여러 종류의 패턴 중 우선순위 2종을 선정합니다. 복합 적용이 필요한 경우 혼합 추천도 제공합니다.</p>
+							</div>
+						</div>
+						<div class="col-6 col-12-small">
+							<div class="bg-step-box">
+								<span class="bg-step-number">4</span>
+								<h4>설치 가이드 생성 (Output)</h4>
+								<p>추천 스티커의 간격, 배치 방향, 부착 구역(층·방위)을 포함한 맞춤 설치 지침서를 제공합니다.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 이미지 -->
+					<span class="image featured"><img src="images/ai.jpg" alt="AI 추천 시스템" /></span>
+
+					<!-- 시뮬레이션 폼 -->
+					<h3 style="margin-top: 2em;">간이 추천 시뮬레이터</h3>
+					<p>아래 정보를 입력하면 건물에 적합한 스티커 유형을 안내해 드립니다.</p>
+					<form method="post" action="#">
+						<div class="row gtr-uniform">
+							<div class="col-6 col-12-xsmall">
+								<select name="orientation">
+									<option value="">건물 주요 유리 방위</option>
+									<option value="S">남향 (South)</option>
+									<option value="N">북향 (North)</option>
+									<option value="E">동향 (East)</option>
+									<option value="W">서향 (West)</option>
+								</select>
+							</div>
+							<div class="col-6 col-12-xsmall">
+								<select name="surroundings">
+									<option value="">주변 환경</option>
+									<option value="forest">인접 녹지·공원 있음</option>
+									<option value="water">인접 수면(강·호수) 있음</option>
+									<option value="urban">도심 (녹지 없음)</option>
+								</select>
+							</div>
+							<div class="col-6 col-12-xsmall">
+								<select name="floor">
+									<option value="">건물 층수</option>
+									<option value="low">1~5층</option>
+									<option value="mid">6~20층</option>
+									<option value="high">21층 이상</option>
+								</select>
+							</div>
+							<div class="col-6 col-12-xsmall">
+								<select name="glass">
+									<option value="">부착 유리 유형</option>
+									<option value="clear">일반 투명 유리</option>
+									<option value="tinted">틴팅·반사 유리</option>
+									<option value="barrier">투명 방음벽·난간</option>
+								</select>
+							</div>
+							<div class="col-12">
+								<input type="checkbox" id="history" name="history" />
+								<label for="history">최근 6개월 내 충돌 사고 목격 이력이 있습니다</label>
+							</div>
+							<div class="col-12">
+								<ul class="actions">
+									<li><input type="submit" value="추천 받기" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+
+					<!-- 샘플 추천 결과 박스 -->
+					<div class="box" style="margin-top: 2em;">
+						<h4>📋 추천 결과 예시 (남향 + 인접 녹지 + 6~20층 + 충돌 이력 있음)</h4>
+						<div class="row gtr-uniform">
+							<div class="col-4 col-12-small">
+								<strong>1순위</strong><br />
+								물결 패턴<br />
+								<small>충돌 감소율 예상: 75~80%</small>
+							</div>
+							<div class="col-4 col-12-small">
+								<strong>2순위</strong><br />
+								사각 패턴 <br />
+								<small>충돌 감소율 예상: 60~70%</small>
+							</div>
+							<div class="col-4 col-12-small">
+								<strong>BCI 점수</strong><br />
+								82 / 100<br />
+								<small>고위험 등급</small>
+							</div>
+						</div>
+					</div>
+
+					<footer>
+						<ul class="actions">
+							<li><a href="stickers.html" class="button large">스티커 종류 상세 보기 →</a></li>
+						</ul>
+						
+					</footer>
+				</article>
+			</div>
+
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-x-twitter"><span class="label">X</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+					<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<p class="copyright">&copy; BIRD GUARD. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
+			</section>
+		</div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
