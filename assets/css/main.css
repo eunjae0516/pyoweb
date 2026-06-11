@@ -3299,21 +3299,11 @@ input, select, textarea {
 			#header {
 				height: 2.75em;
 				line-height: 2.75em;
-				position: relative;
 			}
 
 				#header h1 {
-					position: absolute;
-					left: 0;
-					right: 0;
-					text-align: center;
-					padding: 0;
-					pointer-events: none;
+					padding: 0 0 0 1em;
 				}
-
-					#header h1 a {
-						pointer-events: auto;
-					}
 
 				#header .main .search {
 					display: none;
