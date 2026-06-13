@@ -70,7 +70,7 @@
 						</div>
 					</header>
 
-					<!-- 4단계 프로세스 박스 2×2 그리드 -->
+					
 					<h3>추천 프로세스 4단계</h3>
 					<div class="row gtr-uniform" style="margin-bottom: 2em;">
 						<div class="col-6 col-12-small">
@@ -103,13 +103,13 @@
 						</div>
 					</div>
 
-					<!-- 이미지 -->
+					
 					<span class="image featured"><img src="images/ai.jpg" alt="AI 추천 시스템" /></span>
 
-					<!-- 시뮬레이션 폼 -->
+					
 					<h3 style="margin-top: 2em;">간이 추천 시뮬레이터</h3>
 					<p>아래 정보를 입력하면 건물에 적합한 스티커 유형을 안내해 드립니다.</p>
-					<form method="post" action="#">
+					<form id="ai-rec-form" method="post" action="#">
 						<div class="row gtr-uniform">
 							<div class="col-6 col-12-xsmall">
 								<select name="orientation">
@@ -156,24 +156,33 @@
 						</div>
 					</form>
 
-					<!-- 샘플 추천 결과 박스 -->
-					<div class="box" style="margin-top: 2em;">
-						<h4>📋 추천 결과 예시 (남향 + 인접 녹지 + 6~20층 + 충돌 이력 있음)</h4>
-						<div class="row gtr-uniform">
-							<div class="col-4 col-12-small">
-								<strong>1순위</strong><br />
-								물결 패턴<br />
-								<small>충돌 감소율 예상: 75~80%</small>
+
+					<div id="ai-result-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.75); z-index:9999; align-items:center; justify-content:center;">
+						<div style="background:#fff; border-radius:6px; padding:2.5em; max-width:460px; width:90%; position:relative; box-shadow:0 10px 40px rgba(0,0,0,0.35);">
+							<span id="ai-modal-close" style="position:absolute; top:0.9em; right:1em; font-size:1em; cursor:pointer; color:#aaa; line-height:1; padding:0.2em 0.4em;">✕</span>
+							<h3 style="margin-top:0; color:#4a8c3f;">AI 추천 결과</h3>
+							<div style="background:#f4f8f4; border-radius:4px; padding:1em; margin-bottom:1.4em; text-align:center;">
+								<div style="font-size:0.8em; color:#888; margin-bottom:0.3em;">충돌 위험 지수 (BCI)</div>
+								<div style="font-size:2.8em; font-weight:700; color:#4a8c3f; line-height:1;">82<span style="font-size:0.45em; color:#888; font-weight:400;"> / 100</span></div>
+								<div style="font-size:0.85em; color:#c0392b; font-weight:600; margin-top:0.3em;">⚠ 고위험 등급</div>
 							</div>
-							<div class="col-4 col-12-small">
-								<strong>2순위</strong><br />
-								사각 패턴 <br />
-								<small>충돌 감소율 예상: 60~70%</small>
+							<div style="font-size:0.8em; color:#888; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.6em;">추천 패턴</div>
+							<div style="display:flex; gap:0.8em; margin-bottom:1.4em;">
+								<div style="flex:1; border:2px solid #4a8c3f; border-radius:4px; padding:0.9em; text-align:center;">
+									<div style="font-size:0.75em; color:#4a8c3f; font-weight:700; margin-bottom:0.3em;">1순위</div>
+									<div style="font-weight:700; font-size:1.05em;">물결 패턴</div>
+									<div style="font-size:0.8em; color:#888; margin-top:0.3em;">충돌 감소율 75~80%</div>
+								</div>
+								<div style="flex:1; border:2px solid #ccc; border-radius:4px; padding:0.9em; text-align:center;">
+									<div style="font-size:0.75em; color:#888; font-weight:700; margin-bottom:0.3em;">2순위</div>
+									<div style="font-weight:700; font-size:1.05em;">도트 패턴</div>
+									<div style="font-size:0.8em; color:#888; margin-top:0.3em;">충돌 감소율 60~70%</div>
+								</div>
 							</div>
-							<div class="col-4 col-12-small">
-								<strong>BCI 점수</strong><br />
-								82 / 100<br />
-								<small>고위험 등급</small>
+							<p style="font-size:0.85em; color:#888; margin-bottom:1.5em;">간이 시뮬레이터 결과입니다. 정밀 분석 및 현장 컨설팅은 문의하기로 신청하세요.</p>
+							<div style="display:flex; gap:0.8em; margin:0;">
+								<a href="stickers.html" class="button" style="flex:1; text-align:center;">스티커 상세 보기</a>
+								<a href="contact.html" class="button alt" style="flex:1; text-align:center;">문의하기</a>
 							</div>
 						</div>
 					</div>
@@ -203,5 +212,21 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			var modal = document.getElementById('ai-result-modal');
+			document.getElementById('ai-rec-form').addEventListener('submit', function(e) {
+				e.preventDefault();
+				modal.style.display = 'flex';
+			});
+			document.getElementById('ai-modal-close').addEventListener('click', function() {
+				modal.style.display = 'none';
+			});
+			modal.addEventListener('click', function(e) {
+				if (e.target === modal) modal.style.display = 'none';
+			});
+			document.addEventListener('keydown', function(e) {
+				if (e.key === 'Escape') modal.style.display = 'none';
+			});
+		</script>
 	</body>
 </html>
